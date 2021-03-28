@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <link rel="icon" href="/img/weather.png">
+     <link rel="stylesheet" href="/css/styles.css"> 
+     
+</head>
+
+<body bgcolor="#F3B686">
+    <div class = "main-content">
+        {{>header}}
+
+        <form>
+            <input placeholder="Location"> <button> Search</button>
+            
+        </form>
+
+       <marquee> <p id="message1">
+          
+        </p>
+       </marquee>
+        <p id="message2">
+
+        </p>
+
+    </div>
+
+    
+    {{>footer}}
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
