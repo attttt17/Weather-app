@@ -11,7 +11,13 @@ const request = require('postman-request')
           callback('Location doesnot exist ',undefined)
          }
          else{
-           callback(undefined,'It is '+body.current.weather_descriptions[0]+'. It is currently '+body.current.temperature+' degrees out. It feels like '+body.current.feelslike+' degrees out')
+           callback(undefined,{
+              description : body.current.weather_descriptions[0],
+              windspeed: body.current.wind_speed,
+              tempreature: body.current.temperature,
+              icon: body.current.weather_icons[0]
+              
+           })
          }
     })
 

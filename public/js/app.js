@@ -7,6 +7,7 @@
   const message1=document.querySelector('#message1')
 
   const message2 = document.querySelector('#message2')
+  const message3 = document.querySelector('#message3')
  // message1.textContent = 'from javascript'
 
 
@@ -24,8 +25,10 @@
 
          
           message1.textContent=data.location
-          message2.textContent = data.forecast 
+          message2.textContent = 'It is currently    ' +data.forecast.description 
+          message3.textContent = 'Current Tempreature  :    '+ data.forecast.tempreature + '   degree  '
 
+          document.getElementById('message4').innerHTML = "<img src = '" + data.forecast.icon + "'alt = 'infinix'>"
          }
      })
 })
